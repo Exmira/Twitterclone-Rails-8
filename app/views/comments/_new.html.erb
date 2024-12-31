@@ -1,0 +1,6 @@
+<%= form_with model: [ post, Comment.new] do |f| %>
+Your comment: <br>
+<%= f.text_area :content, size: "20x5" %> <br>
+<%= f.text_field :user_id, value: current_user.id, style: "display:none;" if current_user %>
+<%=f.submit %>
+<% end %>

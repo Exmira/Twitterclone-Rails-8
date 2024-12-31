@@ -1,0 +1,14 @@
+<turbo-frame id="like-section-<%= @post.id %>">
+<% if @post.likes.exists?(user: current_user) %>
+  <%= button_to post_like_path(@post, @post.likes.find_by(user: current_user)), method: :delete, remote: true, class: "like-button" do %>
+    <i class="fas fa-heart" style="color: red;"></i>
+  <% end %>
+<% else %>
+  <%= button_to post_likes_path(@post), method: :post, remote: true, class: "like-button" do %>
+    <i class="far fa-heart" style="color: gray;"></i>
+  <% end %>
+<% end %>
+<div>
+  Likes: <%= @post.likes.count %>
+</div>
+</turbo-frame>

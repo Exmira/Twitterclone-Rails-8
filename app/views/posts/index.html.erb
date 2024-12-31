@@ -1,0 +1,17 @@
+
+<% content_for :title, "Posts" %>
+
+<h1>Posts</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path, style: "" %>
+<!-- <br/> -->
+<%#= link_to "Back to Home", root_path, style: "color: gold;" %> 
