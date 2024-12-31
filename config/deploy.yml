@@ -1,8 +1,8 @@
 # Name of your application. Used to uniquely configure containers.
-service: treehouseapp
+service: twitterclone
 
 # Name of the container image.
-image: malachirails/treehouseapp
+image: malachirails/twitterclone
 
 # Deploy to these servers.
 servers:
